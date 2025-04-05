@@ -12,6 +12,12 @@ Add this to your stylesheet.
 @import url("https://raw.githubusercontent.com/mattmess1221/discord-css-tweaks/refs/heads/main/style.css");
 ```
 
+Or if your style manager supports direct links
+
+```
+https://raw.githubusercontent.com/mattmess1221/discord-css-tweaks/refs/heads/main/style.css
+```
+
 ## List of Features
 
 The following tweaks are available on all platform.
