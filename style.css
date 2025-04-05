@@ -1,0 +1,51 @@
+/* the chat box is too big */
+main {
+    /* --custom-chat-input-margin-bottom: 0.5rem; */
+    --custom-channel-textarea-text-area-height: 2.5rem;
+}
+
+
+/* guild icons are slightly too far apart */
+nav ul[role=tree] {
+    --space-xs: 6px;
+}
+
+/* square guild icons look terrible */
+nav ul svg > foreignObject {
+    border-radius: 15px;
+}
+
+/* 
+If you force us to use a top bar, let web users have a *bit* more screen
+real estate.
+
+only enable on web ui 
+*/
+.platform-web {
+    nav {
+        --original-channel-header-height: var(--custom-channel-header-height);
+    }
+    nav[aria-label="Servers sidebar"] ~ div {
+        border-top-left-radius: 0;
+        border-top: none;
+    }
+    nav header {
+        --custom-channel-header-height: calc(var(--custom-app-top-bar-height) + 1px);
+    }
+
+    div:has(nav) {
+        grid-row: top / end !important;
+    }
+
+    div:has([data-windows]) {
+        grid-template-areas:
+            "guildsList channelsList titleBar"
+            "guildsList channelsList notice"
+            "guildsList channelsList page" !important;
+    }
+
+    nav > ul {
+        margin-top: var(--size-sm) !important;
+    }
+}
+
